@@ -14,13 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(375, 795),
-      builder: () => GetMaterialApp(
-        title: 'Flutter Demo',
-        theme: CustomTheme.lightTheme,
-        routes: Routes.list,
-        initialRoute: Routes.splashScreen,
-      ),
-    );
+        designSize: const Size(375, 795),
+        builder: (context, child) {
+          return GetMaterialApp(
+            title: 'Flutter Demo',
+            theme: CustomTheme.lightTheme,
+            routes: Routes.list,
+            initialRoute: Routes.splashScreen,
+          );
+        });
   }
 }
